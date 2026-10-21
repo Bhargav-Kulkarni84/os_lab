@@ -1,0 +1,25 @@
+compare_and_swap(int *val, int expected, int new){
+
+    int currVal = val;
+    
+    if(currVal == expected){
+        *val = newVal;
+    }
+
+    retunr currVal;
+
+}
+
+
+do{
+
+    lock = 0;
+    
+    while(compare_and_swap(&lock,0,1));
+    //CS
+
+    lock = 0;
+
+
+}
+while(true)
