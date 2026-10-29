@@ -1,0 +1,19 @@
+do{
+
+    while(testAndSet(&lock));
+
+    //CS
+
+    lock = false;
+
+}
+while(true);
+
+boolean testAndSet(&lock){
+
+    boolean rv = *(lock);
+    *lock = true;
+
+    return target;
+
+}

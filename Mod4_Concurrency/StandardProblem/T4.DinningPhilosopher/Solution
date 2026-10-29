@@ -1,0 +1,95 @@
+/*
+    Monitors Solution
+
+    monitor Philosophers{
+    
+        enum {THINKING, HUNGRY, EATING} state[5];    
+        condition self[5]
+
+        void pickup(i){
+
+            state[i] = "HUNGRY",
+            test(i);
+
+            if(state[i] == "HUNGRY"){
+                self[i].wait
+            }
+
+        }
+
+        void putdown(i){
+
+            state[i] = "THINKING";
+            test((i+4)%5)
+            test((i+1)%5)
+        
+        }
+    
+        void test(i){
+
+            if(state[i+4] != "EATING" && state[i+1] != "EATING" && state[i] = "HUNGRY"){
+                state[i] = "EATING"
+                self[i].signal();
+            }
+
+        }
+
+        initialize(){
+            for(int i=0; i<5; i++){
+                state[i] = "Thinking"
+            }
+        }
+    
+    
+    }
+
+
+*/
+
+/*
+    monitor DinningPhilosopher(){
+    
+        enum {Thinking, Hungry, Eating} state[5];
+        self[5];
+
+        void initialize(){
+
+            for(int i=0; i<5; i++){
+                state[i] = Thinking
+            }
+
+        }
+
+        void test(i){
+
+            if(state[(i+4)%5] != Eating && state[(i+1)%5] != Eating && state[i] == Hungry){
+
+                state[i] = "Eating";
+                self[i].signal();
+            
+            }
+
+        }
+
+        void pickup(i){
+
+            state[i] = Hungry
+            test(i);
+
+            if(state[i] == Hungry){
+                self[i].wait();
+            }
+
+        }
+
+        void putdown(i){
+
+            state[i] = Thinking
+            test((i+1)%1);
+            test((i+4)%5)
+        
+        }
+    
+    }
+
+*/

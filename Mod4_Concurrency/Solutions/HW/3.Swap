@@ -1,0 +1,24 @@
+swap(int &a, int &b){
+
+    int temp = *a;
+    *a = *b
+    *b = temp
+}
+
+lock = false;
+key = true;
+
+do{
+
+    key=true;
+
+    while(key == true){
+        swap(lock,key);
+        //CS
+    }
+
+    lock = false;
+    key = true;
+
+}
+while(true);
